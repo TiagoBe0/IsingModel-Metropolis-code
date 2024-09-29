@@ -244,9 +244,9 @@ matriz_spines = np.random.choice([-1, 1], size=(TAMANIO_RED, TAMANIO_RED))
 
 betas_inversas = np.arange(0.1, 2, 0.05)
 magnetizaciones, energias_promedio, desviaciones_energia = obtener_energia_spin(matriz_spines, betas_inversas)
-
+print(str(desviaciones_energia))
 # Gráfico de las magnetizaciones
 plt.figure(figsize=(8, 5))
-plt.plot(1/betas_inversas, magnetizaciones, 'o--')
+plt.plot(1/betas_inversas, magnetizaciones)
 plt.grid(True)
 plt.show()
